@@ -1,0 +1,25 @@
+{
+  "headers": [{
+    "source": "/(.*)",
+    "headers" : [
+      {
+        "key" : "Access-Control-Allow-Origin",
+        "value" : "*"
+      },
+      {
+        "key" : "Access-Control-Allow-Headers",
+        "value" : "content-type"
+      },
+      {
+        "key" : "Access-Control-Allow-Methods",
+        "value" : "DELETE,PUT,POST,GET,OPTIONS"
+      }
+    ]
+  }],
+  "rewrites": [
+    {
+      "source": "/", // 重定向配置 访问/根路径重定向到/api/query-all-users
+      "destination": "/api/Untitled-1.php"
+    }
+  ]
+}
