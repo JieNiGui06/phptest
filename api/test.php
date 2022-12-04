@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    
 }
 else{
-    echo $_GET("a");
+    echo $_GET["a"];
 }
 
 function test_input($data) {
