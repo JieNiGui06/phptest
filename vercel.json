@@ -1,25 +1,10 @@
 {
-  "headers": [{
-    "source": "/(.*)",
-    "headers" : [
-      {
-        "key" : "Access-Control-Allow-Origin",
-        "value" : "*"
-      },
-      {
-        "key" : "Access-Control-Allow-Headers",
-        "value" : "content-type"
-      },
-      {
-        "key" : "Access-Control-Allow-Methods",
-        "value" : "DELETE,PUT,POST,GET,OPTIONS"
-      }
-    ]
-  }],
-  "rewrites": [
-    {
-      "source": "/", // 重定向配置 访问/根路径重定向到/api/query-all-users
-      "destination": "/Untitled-1"
+  "functions": {
+    "api/index.php": {
+      "runtime": "vercel-php@0.3.1",
+      "excludeFiles": "{test/**}",
+      "memory": 256,
+      "maxDuration": 5
     }
-  ]
+  }
 }
