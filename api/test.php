@@ -10,7 +10,7 @@ else{
     //br = 3 is most.
    $url='https://ovooa.caonm.net/API/QQ_Music/?mid='.$_GET["mid"].'&br='.$_GET["br"];
 $html = file_get_contents($url);
-$jobj = json_encode($html);
+$jobj = json_decode($html,true);
 
 $songname =  $jobj["data"]["song"];
 $singer = $jobj["data"]["singer"];
