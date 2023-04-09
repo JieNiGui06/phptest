@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 else{
     //echo $_GET["a"];
-   $url='https://www.php.cn/php-weizijiaocheng-391093.html';
+   $url='https://ovooa.caonm.net/API/QQ_Music/?msg=%E5%91%A8%E6%9D%B0%E4%BC%A6&n=1&br=4';
 $html = file_get_contents($url);
 echo $html;
 }
