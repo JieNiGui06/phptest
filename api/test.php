@@ -15,7 +15,8 @@ $jobj = json_decode($html,true);
 $songname =  $jobj["data"]["song"];
 $singer = $jobj["data"]["singer"];
 $purl = $jobj["data"]["music"];
-echo '<html><head><meta name="viewport" content="width=device-width"></head><body>
+echo '<html><head><meta name="viewport" content="width=device-width"></head><body style="    background-color: rgb(0, 0, 0);    display: block;
+margin: 8px;">
 <p style="text-align: center;color:white;font-size:25px"><a>'.$songname.' - '.$singer.'</a></p>
 <video style="    position: absolute;
 top: 0px;
