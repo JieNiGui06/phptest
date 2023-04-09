@@ -17,8 +17,17 @@ $singer = $jobj["data"]["singer"];
 $purl = $jobj["data"]["music"];
 echo '<html><head><meta name="viewport" content="width=device-width"></head><body>
 <p style="text-align: center;color:white;font-size:25px"><a>'.$songname.' - '.$singer.'</a></p>
-
-<video controls="" autoplay="" name="media" __idm_id__="4808705"><source src="'.$purl.'" type="audio/mpeg"></video></body></html>';
+<video style="    position: absolute;
+top: 0px;
+right: 0px;
+bottom: 0px;
+left: 0px;
+max-height: 100%;
+max-width: 100%;
+margin: auto;
+object-fit: contain;
+overflow-clip-margin: content-box;
+overflow: clip;"  controls="" autoplay="auto" name="media" __idm_id__="4808705"><source src="'.$purl.'" type="audio/mpeg"></video></body></html>';
 }
 
 ?>
