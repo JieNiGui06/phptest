@@ -2,21 +2,23 @@
 // 定义变量并默认设置为空值
 //$nameErr = $emailErr = $genderErr = $websiteErr = "";
 //$name = $email = $gender = $comment = $website = "";
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
    
 }
 else{
     //echo $_GET["a"];
-   $url='https://ovooa.caonm.net/API/QQ_Music/?msg=%E5%91%A8%E6%9D%B0%E4%BC%A6&n=1&br=4';
+    //br = 3 is most.
+   $url='https://ovooa.caonm.net/API/QQ_Music/?mid='.$_GET["mid"].'&br='.$_GET["br"];
 $html = file_get_contents($url);
-echo $html;
+$jobj = json_encode($html);
+
+$songname =  $jobj["data"]["song"];
+$singer = $jobj["data"]["singer"];
+$purl = $jobj["data"]["music"];
+echo '<html><head><meta name="viewport" content="width=device-width"></head><body>
+<p style="text-align: center;color:white;font-size:25px"><a>'.$songname.' - '.$singer.'</a></p>
+
+<video controls="" autoplay="" name="media" __idm_id__="4808705"><source src="'.$purl.'" type="audio/mpeg"></video></body></html>';
 }
 
-function test_input($data) {
-   $data = trim($data);
-   $data = stripslashes($data);
-   $data = htmlspecialchars($data);
-   return $data;
-}
 ?>
