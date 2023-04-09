@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 else{
     //echo $_GET["a"];
-   $url='https://ovooa.muban.plus/API/QQ_Music/?Cookie=&msg=周杰伦&n=1&br=1';
+   $url='https://ovooa.caonm.net/API/QQ_Music/?msg=%E5%91%A8%E6%9D%B0%E4%BC%A6&n=1&br=4';
 $html = file_get_contents($url);
 echo $html;
 }
